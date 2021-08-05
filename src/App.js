@@ -1,5 +1,5 @@
 import "./App.css";
-import { DraggableSVG } from "./components/DraggableSVG";
+import { DraggableSVG } from "./pages/DraggableSVG";
 
 function App() {
   return <DraggableSVG />;
