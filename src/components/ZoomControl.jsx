@@ -1,9 +1,8 @@
 import { green, red } from "@material-ui/core/colors";
-import Icon from "@material-ui/core/Icon";
 import RemoveCircleIcon from "@material-ui/icons/RemoveCircle";
 import SettingsBackupRestoreIcon from "@material-ui/icons/SettingsBackupRestore";
 import React from "react";
-
+import AddCircleIcon from "@material-ui/icons/AddCircle";
 export default function ZoomControle({
   handelZoomIn,
   handelZoomOut,
@@ -19,7 +18,7 @@ export default function ZoomControle({
           disabled={scale > 3}
           onClick={handelZoomIn}
         >
-          <Icon style={{ color: green[500] }}>add_circle</Icon>
+          <AddCircleIcon style={{ color: green[500], marginBottom: "5px" }} />
         </button>
         <button className="btn" disabled={scale < 0.4} onClick={handelZoomOut}>
           <RemoveCircleIcon
