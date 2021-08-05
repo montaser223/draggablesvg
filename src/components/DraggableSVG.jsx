@@ -18,13 +18,14 @@ export const DraggableSVG = () => {
     const canvas = ev.target;
     const ctx = canvas.getContext("2d");
     const { left, top } = canvas.getBoundingClientRect();
-    ctx.drawImage(
-      draggedImage,
-      ev.clientX - left - 75,
-      ev.clientY - top - 75,
-      150,
-      150
-    );
+    scale === 1 &&
+      ctx.drawImage(
+        draggedImage,
+        ev.clientX - left - 75,
+        ev.clientY - top - 75,
+        150,
+        150
+      );
   };
 
   const zoomIn = () => {
@@ -88,15 +89,24 @@ export const DraggableSVG = () => {
       </header>
       <div style={{ textAlign: "center" }}>
         <button
-          className="btn btn-success"
+          className="btn btn-success mx-2"
           disabled={scale > 3}
           onClick={() => zoomIn()}
         >
-          ZoomIn
+          +
         </button>
-        <button disabled={scale < 0.4} onClick={() => zoomOut()}>
-          ZoomOut
+        <button
+          className="btn btn-danger "
+          disabled={scale < 0.4}
+          onClick={() => zoomOut()}
+        >
+          -
         </button>
+        {scale !== 1 && (
+          <div className="alert alert-info">
+            You Can't drop images in Zoom mode
+          </div>
+        )}
       </div>
       <div
         style={{
