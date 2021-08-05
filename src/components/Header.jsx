@@ -16,8 +16,9 @@ export default function Header({ handelOnDragStart }) {
       className="row justify-content-between m-3  p-2"
     >
       <h6 className="text-info">Available SVG</h6>
-      {images.map((imgSrc) => (
+      {images.map((imgSrc, index) => (
         <img
+          key={index}
           draggable="true"
           onDragStart={handelOnDragStart}
           style={styles.image}
