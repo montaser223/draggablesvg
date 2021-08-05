@@ -17,14 +17,12 @@ export const DraggableSVG = () => {
     ev.preventDefault();
     const canvas = ev.target;
     const ctx = canvas.getContext("2d");
-    console.log(ev);
     const { left, top } = canvas.getBoundingClientRect();
-    console.log(draggedImage.getBoundingClientRect());
     ctx.drawImage(
       draggedImage,
       ev.clientX - left - 75,
       ev.clientY - top - 75,
-      150,	
+      150,
       150
     );
   };
@@ -89,7 +87,11 @@ export const DraggableSVG = () => {
         />
       </header>
       <div style={{ textAlign: "center" }}>
-        <button disabled={scale > 3} onClick={() => zoomIn()}>
+        <button
+          className="btn btn-success"
+          disabled={scale > 3}
+          onClick={() => zoomIn()}
+        >
           ZoomIn
         </button>
         <button disabled={scale < 0.4} onClick={() => zoomOut()}>
