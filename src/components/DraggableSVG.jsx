@@ -43,50 +43,6 @@ export const DraggableSVG = () => {
   };
   return (
     <>
-      <header style={styles.header}>
-        <img
-          draggable="true"
-          onDragStart={drag}
-          style={styles.image}
-          src="/assets/images/1588766385Mikrocontroller.svg"
-          alt=""
-        />
-        <img
-          draggable="true"
-          onDragStart={drag}
-          style={styles.image}
-          src="/assets/images/dpst_button.svg"
-          alt=""
-        />
-        <img
-          draggable="true"
-          onDragStart={drag}
-          style={styles.image}
-          src="/assets/images/Machovka_Washing-machine_3.svg"
-          alt=""
-        />
-        <img
-          draggable="true"
-          onDragStart={drag}
-          style={styles.image}
-          src="/assets/images/responsive_design.svg"
-          alt=""
-        />
-        <img
-          draggable="true"
-          onDragStart={drag}
-          style={styles.image}
-          src="/assets/images/server-virtuel-colors2.svg"
-          alt=""
-        />
-        <img
-          draggable="true"
-          onDragStart={drag}
-          style={styles.image}
-          src="/assets/images/tools-server.svg"
-          alt=""
-        />
-      </header>
       <div style={{ textAlign: "center" }}>
         <button
           className="btn btn-success mx-2"
